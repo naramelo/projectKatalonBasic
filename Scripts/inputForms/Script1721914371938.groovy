@@ -16,6 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import java.awt.Rectangle
+
 
 WebUI.openBrowser('')
 
@@ -49,7 +51,9 @@ for (entry in data) {
 	WebUI.click(findTestObject('Object Repository/Page_Rpa Challenge1/input_btn'))
 }
 
-WebUI.waitForElementNotClickable(findTestObject('Object Repository/Page_Rpa Challenge1/div_Congratulations'), 10)
+WebUI.waitForElementNotClickable(findTestObject('Object Repository/Page_Rpa Challenge1/div_Congratulations'), 5)
+
+WebUI.takeScreenshot('D:/Working/Exa Mitra/result.png')
 
 WebUI.closeBrowser()
 
